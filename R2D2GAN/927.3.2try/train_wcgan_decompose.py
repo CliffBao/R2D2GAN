@@ -366,6 +366,10 @@ for start_epoch in range(start_epoch,trainEpochs):
         with torch.no_grad():
             composed_scene = net_g(pos_condition,index_division)
         # print(torch.norm(composed_scene[hero_pos_index,:,0],dim=1))
+        # sio.savemat('net_io.mat',{'pos_condition':pos_condition.detach().cpu().numpy(),
+        #                           'index_div':index_division,
+        #                           'composed_scene':composed_scene.contiguous().view(-1,2*81).detach().cpu().numpy(),
+        #                           'real_scene':real_scene.contiguous().view(-1,2*81).detach().cpu().numpy()})
         composed_scene.requires_grad_()
         real_scene.requires_grad_()
         pos_condition_nbr.requires_grad_()
