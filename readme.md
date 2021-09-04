@@ -64,6 +64,18 @@ This folder contains related files of a experiment where generator loss includes
 
 Others are the same as above.
 
+**R2D2GAN/weight_test_cd**
+
+This folder contains related files of two experiments of different weight between supervised loss and unsupervised loss in classification discriminator loss function.
+
+**R2D2GAN/generator_mlp_test**
+
+This folder contains related files of testing different generator configuration without interactive part.
+
+**R2D2GAN/rd_test**
+
+This folder contains more experiments with or without regression discriminator.
+
 ### evaluate_gan
 
 This folder is used for evaluate R2D2GAN quantitatively. Use *python3 train.py* to train a task model predicting target agent's future trajectory. Use *python3 evaluate.py* to get TSTR performance, in this case, RMSE for future 5 seconds in 10HZ. Several models are already trained in trained_models/.
